@@ -1,10 +1,10 @@
 // Short codes mapping for compression
 const encounterCodes = {
-    'Normal encounter': 'N',
-    'Choose 2 encounter': 'C2',
-    'Monster Encounter': 'M',
-    'Little Devil encounter': 'LD',
-    'Treasure chest (gold)': 'TG',
+    'Tiny Adventures': 'N',
+    'Crossroads of Fate': 'C2',
+    'Blocks Duel': 'M',
+    'Axe Ricochet': 'LD',
+    'Treasure Hunt - Card Realm': 'TG',
     'Treasure chest (jackpot)': 'TJ'
 };
 
@@ -15,84 +15,84 @@ const codeToEncounter = Object.fromEntries(
 const encounterSequences = [
     // Colonne 1 (13 étapes)
     [
-        "Normal encounter",
-        "Choose 2 encounter",
-        "Normal encounter",
-        "Little Devil encounter",
-        "Normal encounter",
-        "Normal encounter",
-        "Choose 2 encounter",
-        "Treasure chest (gold)",
-        "Normal encounter",
-        "Choose 2 encounter",
-        "Normal encounter",
-        "Little Devil encounter",
+        "Tiny Adventures",
+        "Crossroads of Fate",
+        "Tiny Adventures",
+        "Axe Ricochet",
+        "Tiny Adventures",
+        "Tiny Adventures",
+        "Crossroads of Fate",
+        "Treasure Hunt - Card Realm",
+        "Tiny Adventures",
+        "Crossroads of Fate",
+        "Tiny Adventures",
+        "Axe Ricochet",
         "Treasure chest (jackpot)"
     ],
     // Colonne 2 (13 étapes)
     [
-        "Normal encounter",
-        "Normal encounter",
-        "Choose 2 encounter",
-        "Treasure chest (gold)",
-        "Normal encounter",
-        "Normal encounter",
-        "Monster Encounter",
-        "Normal encounter",
-        "Choose 2 encounter",
+        "Tiny Adventures",
+        "Tiny Adventures",
+        "Crossroads of Fate",
+        "Treasure Hunt - Card Realm",
+        "Tiny Adventures",
+        "Tiny Adventures",
+        "Blocks Duel",
+        "Tiny Adventures",
+        "Crossroads of Fate",
         "Treasure chest (jackpot)",
-        "Normal encounter",
-        "Little Devil encounter",
-        "Choose 2 encounter"
+        "Tiny Adventures",
+        "Axe Ricochet",
+        "Crossroads of Fate"
     ],
     // Colonne 3 (13 étapes)
     [
-        "Normal encounter",
-        "Normal encounter",
-        "Monster Encounter",
-        "Normal encounter",
-        "Choose 2 encounter",
-        "Treasure chest (gold)",
-        "Normal encounter",
-        "Normal encounter",
-        "Choose 2 encounter",
+        "Tiny Adventures",
+        "Tiny Adventures",
+        "Blocks Duel",
+        "Tiny Adventures",
+        "Crossroads of Fate",
+        "Treasure Hunt - Card Realm",
+        "Tiny Adventures",
+        "Tiny Adventures",
+        "Crossroads of Fate",
         "Treasure chest (jackpot)",
-        "Choose 2 encounter",
-        "Normal encounter",
-        "Little Devil encounter"
+        "Crossroads of Fate",
+        "Tiny Adventures",
+        "Axe Ricochet"
     ],
     // Colonne 4 (13 étapes)
     [
-        "Normal encounter",
-        "Normal encounter",
-        "Treasure chest (gold)",
-        "Normal encounter",
-        "Choose 2 encounter",
-        "Normal encounter",
-        "Monster Encounter",
-        "Normal encounter",
-        "Choose 2 encounter",
-        "Normal encounter",
-        "Choose 2 encounter",
-        "Monster Encounter",
+        "Tiny Adventures",
+        "Tiny Adventures",
+        "Treasure Hunt - Card Realm",
+        "Tiny Adventures",
+        "Crossroads of Fate",
+        "Tiny Adventures",
+        "Blocks Duel",
+        "Tiny Adventures",
+        "Crossroads of Fate",
+        "Tiny Adventures",
+        "Crossroads of Fate",
+        "Blocks Duel",
         "Treasure chest (jackpot)"
     ]
 ];
 
 // Helpers pour éviter la répétition
 function isSpecialChest(type) {
-  return type === 'Treasure chest (gold)' || type === 'Treasure chest (jackpot)';
+  return type === 'Treasure Hunt - Card Realm' || type === 'Treasure chest (jackpot)';
 }
 
 function getSpecialClass(type, cardOrBadge = 'card') {
   const prefix = cardOrBadge === 'badge' ? 'badge' : 'card';
-  if (type === 'Treasure chest (gold)') return prefix + '-gold';
+  if (type === 'Treasure Hunt - Card Realm') return prefix + '-gold';
   if (type === 'Treasure chest (jackpot)') return prefix + '-jackpot';
   return null;
 }
 
 function getIconWrapperClass(type) {
-  if (type === 'Treasure chest (gold)') return 'text-3xl sm:text-4xl mb-2 gold-text';
+  if (type === 'Treasure Hunt - Card Realm') return 'text-3xl sm:text-4xl mb-2 gold-text';
   if (type === 'Treasure chest (jackpot)') return 'text-3xl sm:text-4xl mb-2 jackpot-text';
   return 'text-3xl sm:text-4xl mb-2';
 }
@@ -200,11 +200,11 @@ function createMatchDetails(matches) {
 
 // Types d'encounters avec leurs couleurs
 const encounterTypes = {
-    "Normal encounter": { color: "#10b981", icon: "fa-user" },
-    "Choose 2 encounter": { color: "#8b5cf6", icon: "fa-hand-pointer" },
-    "Monster Encounter": { color: "#ef4444", icon: "fa-dragon" },
-    "Little Devil encounter": { color: "#f59e0b", icon: "fa-fire" },
-    "Treasure chest (gold)": { color: "#eab308", icon: "fa-coins" },
+    "Tiny Adventures": { color: "#10b981", icon: "fa-user" },
+    "Crossroads of Fate": { color: "#8b5cf6", icon: "fa-hand-pointer" },
+    "Blocks Duel": { color: "#ef4444", icon: "fa-dragon" },
+    "Axe Ricochet": { color: "#f59e0b", icon: "fa-fire" },
+    "Treasure Hunt - Card Realm": { color: "#eab308", icon: "fa-coins" },
     "Treasure chest (jackpot)": { color: "#06b6d4", icon: "fa-gem" }
 };
 
