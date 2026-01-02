@@ -2,7 +2,7 @@
 const encounterCodes = {
     'Tiny Adventures': 'N',
     'Crossroads of Fate': 'C2',
-    'Blocks Duel': 'M',
+    'Cube Battle': 'M',
     'Axe Ricochet': 'LD',
     'Treasure Hunt - Card Realm': 'TG',
     'Treasure chest (jackpot)': 'TJ'
@@ -37,7 +37,7 @@ const encounterSequences = [
         "Treasure Hunt - Card Realm",
         "Tiny Adventures",
         "Tiny Adventures",
-        "Blocks Duel",
+        "Cube Battle",
         "Tiny Adventures",
         "Crossroads of Fate",
         "Treasure chest (jackpot)",
@@ -49,7 +49,7 @@ const encounterSequences = [
     [
         "Tiny Adventures",
         "Tiny Adventures",
-        "Blocks Duel",
+        "Cube Battle",
         "Tiny Adventures",
         "Crossroads of Fate",
         "Treasure Hunt - Card Realm",
@@ -69,12 +69,12 @@ const encounterSequences = [
         "Tiny Adventures",
         "Crossroads of Fate",
         "Tiny Adventures",
-        "Blocks Duel",
+        "Cube Battle",
         "Tiny Adventures",
         "Crossroads of Fate",
         "Tiny Adventures",
         "Crossroads of Fate",
-        "Blocks Duel",
+        "Cube Battle",
         "Treasure chest (jackpot)"
     ]
 ];
@@ -202,7 +202,7 @@ function createMatchDetails(matches) {
 const encounterTypes = {
     "Tiny Adventures": { color: "#10b981", icon: "fa-user" },
     "Crossroads of Fate": { color: "#8b5cf6", icon: "fa-hand-pointer" },
-    "Blocks Duel": { color: "#ef4444", icon: "fa-dragon" },
+    "Cube Battle": { color: "#ef4444", icon: "fa-dragon" },
     "Axe Ricochet": { color: "#f59e0b", icon: "fa-fire" },
     "Treasure Hunt - Card Realm": { color: "#eab308", icon: "fa-coins" },
     "Treasure chest (jackpot)": { color: "#06b6d4", icon: "fa-gem" }
